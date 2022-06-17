@@ -2,6 +2,8 @@ module KuasProject
 
 go 1.17
 
+require github.com/mattn/go-sqlite3 v1.14.13
+
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
