@@ -1,11 +1,13 @@
 import React from 'react'
-// import '../../App.css'
+import Navbar from '../../Navbar'
 import './home.css'
-import {Button} from '../Button'
+import {Button} from '../../Button'
 import { Link } from 'react-router-dom'
 
 function Home() {
   return (
+  <>
+  <Navbar/>
    <div className='home-container'>
       <h1>SELAMAT DATANG DI WEBSITE KUAS</h1>
       <p>Kuas adalah website yang menyediakan materi pembelajaran yang dibutuhkan untuk siswa SMP dan SMA sebagai suplemen tambahan dalam belajar</p>
@@ -17,6 +19,8 @@ function Home() {
     </Link>
       </div>
     </div>
+
+  </>
   )
 }
 
