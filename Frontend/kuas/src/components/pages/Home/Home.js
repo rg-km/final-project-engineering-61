@@ -1,5 +1,8 @@
 import React from 'react'
 import Navbar from '../../Navbar'
+// import Features from './Features/Features'
+import {homeObjOne, homeObjTwo,} from './Features/Data.js';
+import Section from './section'
 // import Footer from '../../Footer'
 import './home.css'
 import {Button} from '../../Button'
@@ -20,6 +23,8 @@ function Home() {
     </Link>
       </div>
     </div>
+    <Section {...homeObjOne}/>
+    <Section {...homeObjTwo}/>
   </>
   )
 }

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './NavAdmin.css';
-import { FaCreativeCommons } from 'react-icons/fa';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 
@@ -39,7 +38,7 @@ function NavAdmin() {
             <div className='menu-icon' onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <ul className={click ? 'nav-menu-admin active' : 'nav-menu-admin'}>
               <li className='nav-item'>
                 <Link to='/admin' className='nav-links' onClick={closeMobileMenu}>
                   Home

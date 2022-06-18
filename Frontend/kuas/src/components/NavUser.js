@@ -40,7 +40,7 @@ function NavUser() {
             <div className='menu-icon' onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <ul className={click ? 'nav-menu-user active' : 'nav-menu-user'}>
               <li className='nav-item'>
                 <Link to='/user' className='nav-links' onClick={closeMobileMenu}>
                   Home

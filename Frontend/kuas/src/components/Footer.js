@@ -10,9 +10,9 @@ function Footer() {
         <div className='footer-link-wrapper'>
         <div class='footer-link-items'>
             <h2>KUAS.inc</h2>
-            <a>0812-1223-1223</a>
-            <a>DKI Jakarta, Indonesia</a>
-            <a>Jl. SITY NURBAYA</a>
+            <p>0812-1223-1223</p>
+            <p>DKI Jakarta,Indonesia</p>
+            <p>Jl. SITY NURBAYA</p>
           </div>
           <div class='footer-link-items'>
             <h2>About Us</h2>
