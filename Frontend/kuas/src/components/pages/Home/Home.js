@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../../Navbar'
+// import Footer from '../../Footer'
 import './home.css'
 import {Button} from '../../Button'
 import { Link } from 'react-router-dom'
@@ -19,7 +20,6 @@ function Home() {
     </Link>
       </div>
     </div>
-
   </>
   )
 }
