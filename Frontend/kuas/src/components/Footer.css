@@ -132,6 +132,9 @@
     .footer-link-wrapper {
       flex-direction: column;
     }
+    .footer-logo {
+      margin-right: 20px;
+    }
   
     .social-media-wrap {
       flex-direction: column;

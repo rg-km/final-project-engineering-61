@@ -48,7 +48,7 @@ function NavUser() {
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/user/materi belajar'
+                  to='/user/materi-belajar'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
@@ -57,7 +57,7 @@ function NavUser() {
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/user/video belajar'
+                  to='/user/video-belajar'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >

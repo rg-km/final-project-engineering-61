@@ -46,7 +46,7 @@ function NavAdmin() {
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/admin/materi belajar'
+                  to='/admin/upload-video'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
@@ -55,20 +55,11 @@ function NavAdmin() {
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/admin/video belajar'
+                  to='/admin/upload-video'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
                   Video Pembelajaran
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link
-                  to='/admin/rating'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Rating
                 </Link>
               </li>
               <li className='nav-btn'>

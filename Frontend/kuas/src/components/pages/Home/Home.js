@@ -16,9 +16,9 @@ function Home() {
       <h1>SELAMAT DATANG DI WEBSITE KUAS</h1>
       <p>Kuas adalah website yang menyediakan materi pembelajaran yang dibutuhkan untuk siswa SMP dan SMA sebagai suplemen tambahan dalam belajar</p>
       <div className='home-btns'>
-      <Link to='/materi belajar'>
+      <Link to='/materi'>
         <Button  buttonSize='btn--large' buttonColor='white'>
-                YUK BELAJAR
+                COBA BELAJAR
         </Button>
     </Link>
       </div>
