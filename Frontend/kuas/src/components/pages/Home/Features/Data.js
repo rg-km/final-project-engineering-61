@@ -1,4 +1,18 @@
 export const homeObjOne = {
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: 'Fitur',
+  headline: 'Materi pembelajaran yang Menarik',
+  description:
+    'Materi pembelajaran yang menarik dan mudah dipahami ',
+  buttonLabel: 'Daftar yuk!!',
+  imgStart: '',
+  img: 'images/kuis.png',
+  alt: 'Belajar'
+};
+
+export const homeObjTwo = {
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
@@ -10,19 +24,5 @@ export const homeObjOne = {
     imgStart: '',
     img: 'images/21606.png',
     alt: 'Video'
-  };
-  
-  export const homeObjTwo = {
-    lightBg: false,
-    lightText: true,
-    lightTextDesc: true,
-    topLine: 'Fitur',
-    headline: 'Kuis menarik setelah pembelajaran',
-    description:
-      'Setelah belajar mata pelajaran, kamu akan mengikuti Kuis untuk membantumu mengerti Pelajaran yang telah kamu pelajari',
-    buttonLabel: 'Daftar yuk!!',
-    imgStart: '',
-    img: 'images/kuis.png',
-    alt: 'Vault'
   };
   
