@@ -55,15 +55,6 @@ function NavUser() {
                   Materi Pembelajaran
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link
-                  to='/user/video-belajar'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Video Pembelajaran
-                </Link>
-              </li>
               <li className='nav-btn'>
                    {button ? (
                      <Link to='/' className='btn-link'>
