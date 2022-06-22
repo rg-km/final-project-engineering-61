@@ -33,10 +33,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: 'black' }}>
         <nav className='navbar'>
           <div className='navbar-container container'>
-            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-             KUAS
-             <FaCreativeCommons className='navbar-icon' />
-            </Link>
+             <img src = "images/logo.png"></img>
             <div className='menu-icon' onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>
