@@ -13,6 +13,9 @@ function App() {
   <>
   <Router>
     <Routes>
+    <Route path='/login'  element={<Login />} />
+    <Route path='/register' element={<Register />} />
+    <Route path='/rating' element={<Rating />} />
     <Route path='/' element={<Home/>} />
     <Route path='/fitur' element={<Features/>}/>
     <Route path='/admin' element={<Admin />} />
