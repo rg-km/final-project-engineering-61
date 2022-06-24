@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+.rating-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+    font-size: 90px;
+}
+
+button {
+    background-color: transparent;
+    border: thin;
+    outline: none;
+    cursor: pointer;
+    font-size: 90px;
+  }
+  .on {
+    color: rgb(229, 255, 0);
+  }
+  .off {
+    color: #ccc;
+  }
+  
+  body {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
