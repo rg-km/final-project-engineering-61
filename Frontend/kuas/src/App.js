@@ -1,11 +1,14 @@
 import './App.css';
-import Register from './components/pages/Login/Register';
-import Login from './components/pages/Login/Login';
-import Rating from './components/pages/Rating/Rating';
+import Features from './components/pages/Home/Features/Features';
+import Admin from './components/pages/admin/Admin';
+import UploadMateri from './components/pages/admin/UploadMateri';
+import User from './components/pages/user/User';
+import MateriUser from './components/pages/user/MateriUser';
+import Home from './components/pages/Home/Home';
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
-
   return (
   <>
   <Router>
@@ -13,7 +16,14 @@ function App() {
     <Route path='/login'  element={<Login />} />
     <Route path='/register' element={<Register />} />
     <Route path='/rating' element={<Rating />} />
+    <Route path='/' element={<Home/>} />
+    <Route path='/fitur' element={<Features/>}/>
+    <Route path='/admin' element={<Admin />} />
+    <Route path='/admin/upload-materi' element={<UploadMateri />} />
+    <Route path='/user' element={<User />} />
+    <Route path='/user/materi-belajar' element={<MateriUser/>}/> 
     </Routes>
+    <Footer/>
   </Router>
   </>
 
