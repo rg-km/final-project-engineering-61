@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 .form{
-    background: url('../../public/stdy.jpg') center center/cover no-repeat;
+    background: url('../../../../public/stdy.jpg') center center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;

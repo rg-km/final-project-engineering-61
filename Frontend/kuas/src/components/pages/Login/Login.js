@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, useContext } from 'react';
-import AuthContext from "../context/AuthProvider";
+import AuthContext from "../../../context/AuthProvider";
 import { Link } from 'react-router-dom';
-import axios from "axios";
+import axios from 'axios';
 import './Login.css'
 const LOGIN_URL = '/auth';
 
@@ -14,6 +14,14 @@ const Login = () => {
     const [pwd, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+        userRef.current.focus();
+    }, [])
+
+    useEffect(() => {
+        setErrMsg('');
+    }, [user, pwd])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -45,14 +53,6 @@ const Login = () => {
             errRef.current.focus();
         }
     }
-
-    useEffect(() => {
-        userRef.current.focus();
-    }, [])
-
-    useEffect(() => {
-        setErrMsg('');
-    }, [user, pwd])
 
     return (
         <div className='form'>
