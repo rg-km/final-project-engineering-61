@@ -9,7 +9,11 @@
     border: none;
     cursor: pointer;
   }
-  
+  .btn--small {
+    background-color: var(--primary);
+    color: #3f2bda;
+    border: 1px solid var(--primary);
+  }
   .btn--primary {
     background-color: var(--primary);
     color: #242424;

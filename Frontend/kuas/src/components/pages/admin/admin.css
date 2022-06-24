@@ -1,28 +1,29 @@
 .backadmin{
-    background-color: rgb(30, 216, 230);
+    background-color: rgb(160, 167, 244);
 }
-.flex-col-adm {
+.pageadmin{
+    background-color: rgb(160, 167, 244);
+    height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    height: 90vh;
-    max-width: 1000px;
-    margin-inline: auto;
-    padding: 40px;
-    gap: 16px;
-    font-style: italic;
-    font-size:larger;
-    background : linear-gradient(var(--neutral-3), var(--neutral-2));
-    background-color: rgb(158, 162, 193)
-}
-.flex-col-adm h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50pt;
-
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
 }
-.flex-col-adm  h3{
-    margin-bottom: 50pt;
-    font-size: 40px;
-
-}
+.menu-admin {
+    background-color: rgb(160, 167, 244);
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .menu-admin>*:hover {
+    transition: transform .3s;
+    transform: translateY(-16px);
+  }
