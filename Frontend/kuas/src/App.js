@@ -19,6 +19,9 @@ import Editsmp from './components/pages/admin/Smp/EditSmp';
 import MateriView1 from './components/pages/admin/Sma/MateriView1';
 import AddSma from './components/pages/admin/Sma/AddSma';
 import Editsma from './components/pages/admin/Sma/EditSma';
+import Login from './components/pages/Login';
+import Rate from './components/pages/Rating/Rate';
+import NotFound from './components/NotFound';
 
 
 function App() {
@@ -26,8 +29,11 @@ function App() {
   <>
   <Router>
     <Routes>
+    <Route path='*' element={<NotFound />} />
     <Route path='/' element={<Home/>} />
     <Route path='/fitur' element={<Features/>}/>
+    <Route path='/login' element={<Login/>}/>
+    <Route path='/rate' element={<Rate/>}/>
     <Route path='/admin' element={<Admin />} />
     <Route path='/admin/upload-materi' element={<UploadMateri />} />
     <Route path='/admin/upload-materi/smp' element={<Upsmp/>} />
@@ -48,7 +54,6 @@ function App() {
       <Route index element={<Sma/>}/>
       <Route path='/user/materi-belajar/sma/:id' element={<MateriSma/>}/>
     </Route>  
-
     </Routes>
     <Footer/>
   </Router>

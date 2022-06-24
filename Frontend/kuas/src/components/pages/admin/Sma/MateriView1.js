@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import NavAdmin from "../../../NavAdmin";
 import BackButton from "../../user/ButtonBack";
 
@@ -12,7 +12,7 @@ function MateriView1() {
   useEffect(() => {
     axios.get(`http://localhost:3008/sma/${id}`).then((res) => {
       setData(res.data);
-    });
+    })// eslint-disable-next-line
   }, []);
 
   console.log();

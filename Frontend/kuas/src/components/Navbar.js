@@ -55,6 +55,15 @@ function Navbar() {
                   Fitur Lainnya
                 </Link>
               </li>
+              <li className='nav-rate'>
+                <Link
+                  to='/rate'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Rate Us
+                </Link>
+              </li>
               <li className='nav-btn'>
                    {button ? (
                      <Link to='/login' className='btn-link'>

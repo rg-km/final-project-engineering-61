@@ -24,7 +24,7 @@ function Editsmp() {
       setMateri3(res.data.materi3); setBab4(res.data.bab4); setMateri4(res.data.materi4); setBab5(res.data.bab5); setMateri5(res.data.materi5); setBab6(res.data.bab6);
       setMateri6(res.data.materi7); setBab7(res.data.bab7); setMateri7(res.data.materi7); setBab8(res.data.bab8); setMateri8(res.data.materi8); setBab9(res.data.bab9);
       setMateri9(res.data.materi9); setBab10(res.data.bab10); setMateri10(res.data.materi10);
-    });
+    })// eslint-disable-next-line
   }, []);
 
   const navigate = useNavigate();

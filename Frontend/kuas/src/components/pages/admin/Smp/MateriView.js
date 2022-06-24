@@ -11,7 +11,7 @@ function MateriView() {
   useEffect(() => {
     axios.get(`http://localhost:3008/smp/${id}`).then((res) => {
       setData(res.data);
-    });
+    })// eslint-disable-next-line
   }, []);
 
   console.log();

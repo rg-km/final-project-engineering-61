@@ -2,11 +2,9 @@ import React, {useEffect}from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '../../Button'
 import NavAdmin from '../../NavAdmin'
-import useApi from '../getapi'
 import './admin.css'
 
 export default function Admin() {
-  const {api, fetch} = useApi((state) => state)
   function loadData(){
       fetch('http://localhost:3008/admin/1')
   }
