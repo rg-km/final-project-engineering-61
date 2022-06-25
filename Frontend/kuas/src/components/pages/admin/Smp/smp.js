@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "../../../Button";
 import NavAdmin from "../../../NavAdmin";
 import BackButton from "../../user/ButtonBack";
 import '../admin.css'
@@ -27,73 +28,46 @@ function Upsmp() {
     <NavAdmin/>
       <div className="backadmin">
       <BackButton/>
-        <h1>Daftar Materi</h1>
-        <div className="flex flex-col">
-          <div >
+      <div>
+        <div className="title" >
+        <h1 >Daftar Materi</h1>
+          <Button  buttonStyle={'btn--outline'} buttonSize={'btn--mobile'}  >
+          <Link  to="/admin/upload-materi/smp/add" >
+            Add Materi
+            </Link>
+            </Button>
+        </div>
+        <div >
+          <div>
             <div >
-              <div >
-                <Link to="/admin/upload-materi/smp/add" >
-                     Add Materi
+            <div className="grid">
+          {materi.length &&
+            materi.map((pel, index) => (
+                <Link key={index} to={`/admin/upload-materi/smp/${pel.id}`} >
+                <div className="cardadmin">
+                  <p>{pel.nama}</p>
+                  <h4>
+                   <Link
+                      to={`/admin/upload-materi/smp/edit/${pel.id}`}>
+                      Edit
+                    </Link>
+                  </h4>
+                  <h4>
+                  <Link
+                      onClick={()=>deleteUser(pel.id)}
+                      to={"/admin/upload-materi/smp"}>
+                      Delete
+                  </Link>
+                  </h4>
+                 
+                </div>
                 </Link>
-                <table >
-                  <thead >
-                    <tr>
-                      <th>
-                        #
-                      </th>
-                      <th>
-                        Name
-                      </th>
-                      <th>
-                        Bab
-                      </th>
-                      <th>
-                       Materi
-                      </th>
-                      <th>
-                        Action
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {materi.map((data, index) => (
-                      <tr
-                        key={index}>
-                        <td >
-                          {index + 1}
-                        </td>
-                        <td >
-                          {data.nama}
-                        </td>
-                        <td >
-                          {data.bab1}
-                        </td>
-                        <td >
-                          {data.materi1}
-                        </td>
-                        <td >
-                          <Link
-                            to={`/admin/upload-materi/smp/${data.id}`}>
-                            VIew
-                          </Link>
-                          <Link
-                            to={`/admin/upload-materi/smp/edit/${data.id}`}>
-                            Edit
-                          </Link>
-                          <Link
-                            onClick={()=>deleteUser(data.id)}
-                            to={"#"}>
-                            Delete
-                          </Link>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+            ))}
+        </div>
               </div>
             </div>
-          </div>
         </div>
+      </div>
       </div>
     </>
   );

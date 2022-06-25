@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import NavAdmin from "../../../NavAdmin";
+import BackButton from "../../user/ButtonBack";
 
 function MateriView() {
   const { id } = useParams();
@@ -19,137 +20,133 @@ function MateriView() {
     <>
     <NavAdmin/>
       <div className="backadmin">
-        <Link
-          to={`/admin/upload-materi/smp`}
-        >
-          Back To Home
-        </Link>
+      <BackButton/>
         {data && (
-          <div >
-           <div >
+          <div className="flex" >
+           <div  >
               <h2>
                 Nama mapel :
               </h2>
-              <h3 >
+              <p >
                 {data.nama}
-              </h3>
+              </p>
               <h2 >
                 Bab1 :
               </h2>
-              <h3>
+              <p>
                 {data.bab1}
-              </h3>
+              </p>
               <h2 >
                 Materi1 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi1}
-              </h3>
+              </p>
               <h2 >
                 Bab2 :
               </h2>
-              <h3>
+              <p>
                 {data.bab2}
-              </h3>
+              </p>
               <h2 >
                 Materi2 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi2}
-              </h3>
+              </p>
               <h2 >
                 Bab3 :
               </h2>
-              <h3>
+              <p>
                 {data.bab3}
-              </h3>
+              </p>
               <h2 >
                 Materi3 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi3}
-              </h3>
+              </p>
               <h2 >
                 Bab4 :
               </h2>
-              <h3>
+              <p>
                 {data.bab4}
-              </h3>
+              </p>
               <h2 >
                 Materi4 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi4}
-              </h3>
+              </p>
               <h2 >
                 Bab5 :
               </h2>
-              <h3>
+              <p>
                 {data.bab5}
-              </h3>
+              </p>
               <h2 >
                 Materi5 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi5}
-              </h3>
+              </p>
               <h2 >
                 Bab6 :
               </h2>
-              <h3>
+              <p>
                 {data.bab6}
-              </h3>
+              </p>
               <h2 >
                 Materi6 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi6}
-              </h3>
+              </p>
               <h2 >
                 Bab7 :
               </h2>
-              <h3>
+              <p>
                 {data.bab7}
-              </h3>
+              </p>
               <h2 >
                 Materi7 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi7}
-              </h3> <h2 >
+              </p> <h2 >
                 Bab8 :
               </h2>
-              <h3>
+              <p>
                 {data.bab8}
-              </h3>
+              </p>
               <h2 >
                 Materi8 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi8}
-              </h3> <h2 >
+              </p> <h2 >
                 Bab9 :
               </h2>
-              <h3>
+              <p>
                 {data.bab9}
-              </h3>
+              </p>
               <h2 >
                 Materi9 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi9}
-              </h3> <h2 >
+              </p> <h2 >
                 Bab10 :
               </h2>
-              <h3>
+              <p>
                 {data.bab10}
-              </h3>
+              </p>
               <h2 >
                 Materi10 :
               </h2>
-              <h3 >
+              <p >
                 {data.materi10}
-              </h3>
+              </p>
             </div>
           </div>
         )}

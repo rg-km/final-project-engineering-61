@@ -1,16 +1,75 @@
 .backadmin{
     background-color: rgb(160, 167, 244);
 }
+.cardadmin{
+  max-width: 576px;
+  margin-inline: auto;
+  padding: 40px;
+  background: linear-gradient(var(--neutral-3), var(--neutral-2));
+  background-color: aqua;
+}
+.cardadmin p{
+  color: black;
+  font-size: large;
+}
+.title{
+  background-color: rgb(160, 167, 244);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  
+}
 .pageadmin{
     background-color: rgb(160, 167, 244);
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
+}
+.form{
+  display: flex;
+
+}
+.flex{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-items: center;
+  gap: 16px;
+  height: auto;
+  max-width: auto;
+  margin-inline: auto;
+  padding: 40px;
+  background: linear-gradient(var(--neutral-3), var(--neutral-2));
+
+}
+.flex textarea{
+  border: 1px solid #a9a9a9;
+  border-radius: 5;
+  padding: 40px;
+  margin: 20px 0;
+  min-height: 300;
+  width: 10;
+}
+.flex-coladmin{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain; max-width: 576px;
+  margin-inline: auto;
+  padding: 40px;
+  background: linear-gradient(var(--neutral-3), var(--neutral-2));
+  background-color: rgb(0, 102, 255);
 }
 .menu-admin {
     background-color: rgb(160, 167, 244);

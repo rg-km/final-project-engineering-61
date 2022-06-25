@@ -17,11 +17,12 @@ import MateriView from './components/pages/admin/Smp/MateriView';
 import AddSmp from './components/pages/admin/Smp/AddSmp';
 import Editsmp from './components/pages/admin/Smp/EditSmp';
 import MateriView1 from './components/pages/admin/Sma/MateriView1';
-import AddSma from './components/pages/admin/Sma/AddSma';
 import Editsma from './components/pages/admin/Sma/EditSma';
 import Login from './components/pages/Login';
 import Rate from './components/pages/Rating/Rate';
 import NotFound from './components/NotFound';
+import AddSma from './components/pages/admin/Sma/AddSma';
+
 
 
 function App() {
@@ -36,8 +37,10 @@ function App() {
     <Route path='/rate' element={<Rate/>}/>
     <Route path='/admin' element={<Admin />} />
     <Route path='/admin/upload-materi' element={<UploadMateri />} />
-    <Route path='/admin/upload-materi/smp' element={<Upsmp/>} />
-    <Route path='/admin/upload-materi/smp/:id' element={<MateriView/>} />
+    <Route path='/admin/upload-materi/smp'>
+      <Route index element={<Upsmp/>}/>
+      <Route path='/admin/upload-materi/smp/:id' element={<MateriView/>} />
+    </Route>
     <Route path='/admin/upload-materi/smp/add' element={<AddSmp/>} />
     <Route path='/admin/upload-materi/smp/edit/:id' element={<Editsmp/>} />
     <Route path='/admin/upload-materi/sma' element={<Upsma/>} />

@@ -1,8 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import './rate.css'
+import axios from 'axios'
 import Navbar from "../../Navbar";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const colors = {
     orange: "#FFBA5A",
@@ -13,9 +14,19 @@ const colors = {
 
 
 function Rate() {
+  const [rating, setRating] = useState("");  
   const [currentValue, setCurrentValue] = useState(0);
   const [hoverValue, setHoverValue] = useState(undefined);
   const stars = Array(5).fill(0)
+
+  const data = {
+    rating:rating
+  }
+  const navigate = useNavigate();
+  function submitForm(e){
+    e.preventDefault();
+    axios.post("http://localhost:3008/rate", data.then(navigate("/")))
+  }
 
   const handleClick = value => {
     setCurrentValue(value)
@@ -55,17 +66,19 @@ function Rate() {
         })}
       </div>
       <textarea
+        value={rating}
+        onChange={(e) => setRating(e.target.value)}
         placeholder="What's your experience?"
+        type="text"
         style={styles.textarea}
+
       />
-    <Link to='/'>
       <button
         style={styles.button}
-    
+        onClick={submitForm}
       >
         Submit
       </button>
-    </Link>
     </div>
     </div>
     </>
@@ -88,13 +101,13 @@ const styles = {
     borderRadius: 5,
     padding: 10,
     margin: "20px 0",
-    minHeight: 100,
-    width: 300
+    minHeight: 300,
+    width: 500
   },
   button: {
     border: "1px solid #a9a9a9",
     borderRadius: 5,
-    width: 300,
+    width: 500,
     padding: 10,
   }
 

@@ -1,5 +1,18 @@
 :root {
     --primary: rgb(16, 16, 16);
+
+
+  }
+  .red{
+    color: red;
+  }
+
+  .blue{
+    color: blue;
+  }
+
+  .green{
+    color: green;
   }
   
   .btn {

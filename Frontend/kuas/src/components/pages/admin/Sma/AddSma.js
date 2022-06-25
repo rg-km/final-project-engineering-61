@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../admin.css"
 import { Button } from "../../../Button";
 import NavAdmin from "../../../NavAdmin";
+import BackButton from "../../user/ButtonBack";
 
 function AddSma() {
   const [nama, setNama] = useState(""); const [bab1, setBab1] = useState(""); 
@@ -31,10 +33,11 @@ function AddSma() {
     <>
     <NavAdmin/>
     <div className="backadmin">
-      <h2 className="text-2xl font-bold">ADD Materi</h2>
-      <form className="w-[50%] h-full flex flex-col mt-2">
+      <BackButton/>
+      <h2 className="title">ADD Materi</h2>
+      <form className="flex">
        <b> Nama:</b>
-        <input
+        <textarea
           value={nama}
           onChange={(e) => setNama(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -42,7 +45,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Bab1:</b>
-        <input
+        <textarea
           value={bab1}
           onChange={(e) => setBab1(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -50,7 +53,7 @@ function AddSma() {
           placeholder="Enter "
         />
         <b> Materi1:</b>
-        <input
+        <textarea
           value={materi1}
           onChange={(e) => setMateri1(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -58,7 +61,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Bab2:</b>
-         <input
+         <textarea
           value={bab2}
           onChange={(e) => setBab2(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -66,7 +69,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Materi2:</b>
-        <input
+        <textarea
           value={materi2}
           onChange={(e) => setMateri2(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -74,7 +77,7 @@ function AddSma() {
           placeholder="Enter "
         />
         <b> Bab3:</b>
-        <input
+        <textarea
           value={bab3}
           onChange={(e) => setBab3(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -82,7 +85,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Materi3:</b>
-         <input
+         <textarea
           value={materi3}
           onChange={(e) => setMateri3(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -90,7 +93,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Bab4:</b>
-        <input
+        <textarea
           value={bab4}
           onChange={(e) => setBab4(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -98,7 +101,7 @@ function AddSma() {
           placeholder="Enter "
         />
         <b> Materi4:</b>
-        <input
+        <textarea
           value={materi4}
           onChange={(e) => setMateri4(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -106,7 +109,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Bab5:</b>
-         <input
+         <textarea
           value={bab5}
           onChange={(e) => setBab5(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -114,7 +117,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Materi5:</b>
-        <input
+        <textarea
           value={materi5}
           onChange={(e) => setMateri5(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -122,7 +125,7 @@ function AddSma() {
           placeholder="Enter "
         />
         <b> Bab6:</b>
-        <input
+        <textarea
           value={bab6}
           onChange={(e) => setBab6(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -130,7 +133,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Materi6:</b>
-         <input
+         <textarea
           value={materi6}
           onChange={(e) => setMateri6(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -138,7 +141,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Bab7:</b>
-        <input
+        <textarea
           value={bab7}
           onChange={(e) => setBab7(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -146,7 +149,7 @@ function AddSma() {
           placeholder="Enter "
         />
         <b> Materi7:</b>
-        <input
+        <textarea
           value={materi7}
           onChange={(e) => setMateri7(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -154,7 +157,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Bab8:</b>
-         <input
+         <textarea
           value={bab8}
           onChange={(e) => setBab8(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -162,7 +165,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Materi8:</b>
-        <input
+        <textarea
           value={materi8}
           onChange={(e) => setMateri8(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -170,7 +173,7 @@ function AddSma() {
           placeholder="Enter "
         />
         <b> Bab9:</b>
-        <input
+        <textarea
           value={bab9}
           onChange={(e) => setBab9(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -178,7 +181,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Materi9:</b>
-         <input
+         <textarea
           value={materi9}
           onChange={(e) => setMateri9(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -186,7 +189,7 @@ function AddSma() {
           placeholder="Enter"
         />
         <b> Bab10:</b>
-        <input
+        <textarea
           value={bab10}
           onChange={(e) => setBab10(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -194,7 +197,7 @@ function AddSma() {
           placeholder="Enter "
         />
         <b> Materi10:</b>
-        <input
+        <textarea
           value={materi10}
           onChange={(e) => setMateri10(e.target.value)}
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
@@ -206,7 +209,7 @@ function AddSma() {
           type="submit"
           onClick={submitForm}
         >
-          ADD
+          ADD 
         </Button>
       </form>
     </div>
