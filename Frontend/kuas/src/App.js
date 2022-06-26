@@ -18,7 +18,8 @@ import AddSmp from './components/pages/admin/Smp/AddSmp';
 import Editsmp from './components/pages/admin/Smp/EditSmp';
 import MateriView1 from './components/pages/admin/Sma/MateriView1';
 import Editsma from './components/pages/admin/Sma/EditSma';
-import Login from './components/pages/Login';
+import Login from './components/pages/Login/Login';
+import Register from './components/pages/Register/Register';
 import Rate from './components/pages/Rating/Rate';
 import NotFound from './components/NotFound';
 import AddSma from './components/pages/admin/Sma/AddSma';
@@ -33,8 +34,10 @@ function App() {
     <Route path='*' element={<NotFound />} />
     <Route path='/' element={<Home/>} />
     <Route path='/fitur' element={<Features/>}/>
-    <Route path='/login' element={<Login/>}/>
     <Route path='/rate' element={<Rate/>}/>
+    <Route path='/login'  element={<Login />} />
+    <Route path='/register' element={<Register />} />
+    <Route path='/rating' element={<Rating />} />  
     <Route path='/admin' element={<Admin />} />
     <Route path='/admin/upload-materi' element={<UploadMateri />} />
     <Route path='/admin/upload-materi/smp'>
