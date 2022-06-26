@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import useApi from "../getapi";
 import { useParams } from "react-router-dom";
 import BackButton from "./ButtonBack";
@@ -13,16 +13,16 @@ export default function MateriSma() {
     
     const {id} = useParams();
     const controller = new AbortController();
-    function loadMateri(){
-        fetch('http://localhost:3008/sma/' + id)
-    }
       useEffect(() => {
-        // TODO: answer here
+        function loadMateri(){
+          fetch('http://localhost:3008/sma/' + id)
+      }
+
         loadMateri();
         return () => {
           controller.abort();
         };
-      }, []);
+      }, [])// eslint-disable-line react-hooks/exhaustive-deps
     
   return (
     <>

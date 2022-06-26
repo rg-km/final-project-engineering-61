@@ -11,7 +11,7 @@ export default function User() {
     <>
     <NavUser/>
     <div className='user-container'>
-      <h1>SELAMAT DATANG DI WEBSITE KUAS</h1>
+      <h1>SELAMAT DATANG DI WEBSITE BEAS</h1>
    <div className='user-btns'>
       <Link to='/user/materi-belajar'>
         <Button  buttonSize='btn--large' buttonColor='white'>

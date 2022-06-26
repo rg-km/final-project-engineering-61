@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, } from "react";
 import useApi from "../getapi";
 import { useParams } from "react-router-dom";
 import BackButton from "./ButtonBack";
@@ -9,7 +9,6 @@ import Whatsapp from "../../Whatsapp";
 
 
 export default function MateriSmp() {
-    // const [materi, setMateri] = useState([]);
     const {api, fetch} = useApi((state) => state)
     
     const {id} = useParams();
@@ -18,12 +17,11 @@ export default function MateriSmp() {
         fetch('http://localhost:3008/smp/' + id)
     }
       useEffect(() => {
-        // TODO: answer here
         loadMateri();
         return () => {
           controller.abort();
         };
-      }, []);
+      }, [])// eslint-disable-line react-hooks/exhaustive-deps
     
   return (
     <>

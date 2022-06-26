@@ -15,7 +15,7 @@ export default function Sma() {
     }
     useEffect(() => {
        loadData();
-      }, []);
+      }, [])// eslint-disable-line react-hooks/exhaustive-deps
   return (<>
     <NavUser/>
     <div className='background'>

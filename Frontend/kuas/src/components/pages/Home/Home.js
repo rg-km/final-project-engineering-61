@@ -13,7 +13,7 @@ function Home() {
   <>
   <Navbar/>
    <div className='home-container'>
-      <h1>SELAMAT DATANG DI WEBSITE KUAS</h1>
+      <h1>SELAMAT DATANG DI WEBSITE BEAS</h1>
       <p>Kuas adalah website yang menyediakan materi pembelajaran yang dibutuhkan untuk siswa SMP dan SMA sebagai suplemen tambahan dalam belajar</p>
       <div className='home-btns'>
       <Link to='/register'>
