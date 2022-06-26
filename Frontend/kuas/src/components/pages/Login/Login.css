@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-.form{
+.form-login{
     background: url('../../../../public/stdy.jpg') center center/cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
     min-height: 100vh; 
     padding: 1rem 0.5rem;
 }
-section {
+.section-login {
     width: 100%;
     max-width: 420px;
     min-height: 400px;
@@ -27,9 +27,6 @@ form {
     padding-bottom: 1rem;
 }
 
-a, a:visited {
-    color: #fff;
-}
 
 input[type="text"],
 input[type="password"],
