@@ -34,7 +34,7 @@ function NavUser() {
         <nav className='navuser'>
           <div className='navbar-container container'>
             <Link to='/user' className='navbar-logo' onClick={closeMobileMenu}>
-             KUAS
+            BEAS
              <FaCreativeCommons className='navbar-icon' />
             </Link>
             <div className='menu-icon' onClick={handleClick}>

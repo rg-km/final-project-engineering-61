@@ -1,0 +1,12 @@
+.bg{
+    background-color: #5fef1d;
+}
+.rate{
+    height: auto;
+    max-width: auto;
+    margin-inline: auto;
+    padding: 40px;
+    background: linear-gradient(var(--neutral-3), var(--neutral-2));
+    background-color: rgb(61, 109, 63);
+    
+}
