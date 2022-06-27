@@ -20,10 +20,10 @@ func (u *MateriRepository) FetchMateriByID(id int64) (Materi, error) {
 
 	row := u.db.QueryRow(sqlStmt, id)
 	err := row.Scan(
-		&materi.id_materi,
-		&materi.nama_pelajaran,
-		&materi.sub_bab,
-		&materi.content,
+		&materi.ID_Materi,
+		&materi.Nama_Pelajaran,
+		&materi.Subbab,
+		&materi.Content,
 	)
 
 	return materi, err
@@ -44,10 +44,10 @@ func (u *MateriRepository) FetchMateri() ([]Materi, error) {
 	var materis Materi
 	for rows.Next() {
 		err := rows.Scan(
-			&materis.id_materi,
-			&materis.nama_pelajaran,
-			&materis.sub_bab,
-			&materis.content,
+			&materis.ID_Materi,
+			&materis.Nama_Pelajaran,
+			&materis.Subbab,
+			&materis.Content,
 		)
 
 		if err != nil {

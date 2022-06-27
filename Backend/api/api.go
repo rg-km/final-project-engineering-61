@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"Backend/repository"
+	"KuasProject/repository"
 )
 
 type API struct {

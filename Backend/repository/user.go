@@ -95,12 +95,12 @@ func (u *UserRepository) Login(username string, password string) (*string, error
 
 }
 
-func (u *UserRepository) InsertUser(username string, password string, role string, loggedin bool) error {
+func (u *UserRepository) InsertUser(username string, password string) error {
 	var sqlStmt string
 
-	sqlStmt = `INSERT INTO users (username, password, role, loggedin) VALUES (?, ?, ?, ?);`
+	sqlStmt = `INSERT INTO users (username, password) VALUES (?, ?);`
 
-	_, err := u.db.Exec(sqlStmt, username, password, role, loggedin)
+	_, err := u.db.Exec(sqlStmt, username, password)
 	if err != nil {
 		return err
 	}
