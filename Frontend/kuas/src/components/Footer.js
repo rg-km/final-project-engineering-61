@@ -9,7 +9,7 @@ function Footer() {
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
         <div class='footer-link-items'>
-            <h2>KUAS.inc</h2>
+            <h2>BEAS.inc</h2>
             <p>0812-1223-1223</p>
             <p>DKI Jakarta,Indonesia</p>
             <p>Jl. SITY NURBAYA</p>
@@ -39,7 +39,7 @@ function Footer() {
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-              KUAS
+              BEAS.inc
               <i class='fab fa-typo3' />
             </Link>
           </div>
