@@ -34,7 +34,7 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-             KUAS
+             BEAS
              <FaCreativeCommons className='navbar-icon' />
             </Link>
             <div className='menu-icon' onClick={handleClick}>
@@ -53,6 +53,15 @@ function Navbar() {
                   onClick={closeMobileMenu}
                 >
                   Fitur Lainnya
+                </Link>
+              </li>
+              <li className='nav-rate'>
+                <Link
+                  to='/rate'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Rate Us
                 </Link>
               </li>
               <li className='nav-btn'>

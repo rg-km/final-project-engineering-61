@@ -78,7 +78,8 @@
     font-size: 24px;
   }
   
-  .social-media {
+  .social-media-footer {
+    background-color: #242424;
     max-width: 1000px;
     width: 100%;
   }

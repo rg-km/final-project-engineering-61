@@ -1,5 +1,18 @@
 :root {
     --primary: rgb(16, 16, 16);
+
+
+  }
+  .red{
+    color: red;
+  }
+
+  .blue{
+    color: blue;
+  }
+
+  .green{
+    color: green;
   }
   
   .btn {
@@ -9,10 +22,14 @@
     border: none;
     cursor: pointer;
   }
-  
+  .btn--small {
+    background-color: var(--primary);
+    color: #2c2183;
+    border: 1px solid var(--primary);
+  }
   .btn--primary {
     background-color: var(--primary);
-    color: #242424;
+    color: whitesmoke;
     border: 1px solid var(--primary);
   }
   
