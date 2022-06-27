@@ -3,12 +3,14 @@ package repository
 //import "time"
 
 type User struct {
-	ID       int64  `db:"id"`
-	Username string `db:"username"`
-	Password string `db:"password"`
-	Role     string `db:"role"`
-	Loggedin bool   `db:"loggedin"`
-	Token    string `db:"token"`
+	ID        int64  `db:"id"`
+	Username  string `db:"username"`
+	Email     string `db:"email"`
+	Password  string `db:"password"`
+	Role      string `db:"role"`
+	Tingkatan string `db:"tingkatan"`
+	LoggedIn  string `db:"loggedin"`
+	Token     bool   `db:"token"`
 }
 
 type Materi struct {

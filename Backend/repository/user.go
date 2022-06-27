@@ -17,15 +17,17 @@ func (u *UserRepository) FetchUserByID(id int64) (User, error) {
 	var sqlStmt string
 	var user User
 
-	sqlStmt = `SELECT id, username, password, role, loggedin FROM users WHERE id = ?;`
+	sqlStmt = `SELECT id, username, email, password, role, tingkatan, loggedin FROM users WHERE id = ?;`
 
 	row := u.db.QueryRow(sqlStmt, id)
 	err := row.Scan(
 		&user.ID,
 		&user.Username,
+		&user.Email,
 		&user.Password,
 		&user.Role,
-		&user.Loggedin,
+		&user.Tingkatan,
+		&user.LoggedIn,
 	)
 
 	return user, err
@@ -35,7 +37,7 @@ func (u *UserRepository) FetchUsers() ([]User, error) {
 	var sqlStmt string
 	var users []User
 
-	sqlStmt = `SELECT id, username, password, role, logged in FROM users`
+	sqlStmt = `SELECT id, username, email, password, role, tingkatan, loggedin FROM users`
 
 	rows, err := u.db.Query(sqlStmt)
 	if err != nil {
@@ -48,9 +50,11 @@ func (u *UserRepository) FetchUsers() ([]User, error) {
 		err := rows.Scan(
 			&user.ID,
 			&user.Username,
+			&user.Email,
 			&user.Password,
 			&user.Role,
-			&user.Loggedin,
+			&user.Tingkatan,
+			&user.LoggedIn,
 		)
 
 		if err != nil {
@@ -65,7 +69,7 @@ func (u *UserRepository) FetchUsers() ([]User, error) {
 func (u *UserRepository) Login(username string, password string) (*string, error) {
 	var sqlStmt string
 
-	sqlStmt = `SELECT id, username, password, role, loggedin FROM users WHERE username = ? AND password = ?;`
+	sqlStmt = `SELECT id, username, email, password, role, tingkatan, loggedin FROM users WHERE username = ? AND password = ?;`
 
 	row := u.db.QueryRow(sqlStmt, username, password)
 
@@ -73,9 +77,11 @@ func (u *UserRepository) Login(username string, password string) (*string, error
 	err := row.Scan(
 		&user.ID,
 		&user.Username,
+		&user.Email,
 		&user.Password,
 		&user.Role,
-		&user.Loggedin,
+		&user.Tingkatan,
+		&user.LoggedIn,
 	)
 
 	if err != nil {
@@ -95,12 +101,12 @@ func (u *UserRepository) Login(username string, password string) (*string, error
 
 }
 
-func (u *UserRepository) InsertUser(username string, password string) error {
+func (u *UserRepository) InsertUser(username string, email string, password string, role string, tingkatan string, loggedin bool) error {
 	var sqlStmt string
 
-	sqlStmt = `INSERT INTO users (username, password) VALUES (?, ?);`
+	sqlStmt = `INSERT INTO users (username, email, password, role, tingkatan, loggedin) VALUES (?, ?, ?, ?, ?, ?);`
 
-	_, err := u.db.Exec(sqlStmt, username, password)
+	_, err := u.db.Exec(sqlStmt, username, email, password, role, tingkatan, loggedin)
 	if err != nil {
 		return err
 	}

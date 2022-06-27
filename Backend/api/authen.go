@@ -11,8 +11,10 @@ import (
 type User struct {
 	Username  string `json:"username"`
 	Email     string `json:"email"`
-	Tingkatan string `json:"tingkatan"`
 	Password  string `json:"password"`
+	Role      string `json:"role"`
+	Tingkatan string `json:"tingkatan"`
+	LoggedIn  bool   `json:"loggedin"`
 }
 
 type LoginSuccessResponse struct {
@@ -27,7 +29,10 @@ type AuthErrorResponse struct {
 type Register struct {
 	Username  string `json:"username"`
 	Email     string `json:"email"`
+	Password  string `json:"password"`
+	Role      string `json:"role"`
 	Tingkatan string `json:"tingkatan"`
+	LoggedIn  bool   `json:"loggedin"`
 }
 
 type RegisterSuccesResponse struct {
@@ -111,7 +116,7 @@ func (api *API) register(w http.ResponseWriter, req *http.Request) {
 	}
 
 	encoder := json.NewEncoder(w)
-	err = api.usersRepo.InsertUser(user.Username, user.Password)
+	err = api.usersRepo.InsertUser(user.Username, user.Email, user.Password, user.Role, user.Tingkatan, user.LoggedIn)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		encoder.Encode(AuthErrorResponse{Error: err.Error()})
@@ -121,7 +126,10 @@ func (api *API) register(w http.ResponseWriter, req *http.Request) {
 	register := Register{
 		Username:  user.Username,
 		Email:     user.Email,
+		Password:  user.Password,
+		Role:      user.Role,
 		Tingkatan: user.Tingkatan,
+		LoggedIn:  user.LoggedIn,
 	}
 
 	registerResponse := RegisterSuccesResponse{
