@@ -1,0 +1,18 @@
+[{
+    "username": "kelompok61",
+    "first_name": "kelompok",
+    "last_name": "61",
+    "password": "kelompok61",
+    "email": "admin@kelompok61.com",
+    "group": "admin",
+    "tingkatan": "SMA"
+}, {
+    "username": "backend",
+    "password": "backend",
+    "first_name": "backend",
+    "last_name": "backend",
+    "email": "backend@kelompok61.com",
+    "group": "penggunna",
+    "tingkatan": "SMA"
+
+}]

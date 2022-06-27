@@ -1,0 +1,57 @@
+.background {
+    background-color: aquamarine ;
+}
+.main-menu {
+    background-color: aquamarine;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .main-menu>*:hover {
+    transition: transform .3s;
+    transform: translateY(-16px);
+  }
+
+  .main-menu h1 {
+    color: blue;
+  }
+  .card {
+    max-width: 576px;
+    margin-inline: auto;
+    padding: 40px;
+    background: linear-gradient(var(--neutral-3), var(--neutral-2));
+    background-color: rgb(2, 245, 15);
+  }
+  .card p{
+    color: black;
+    font-size: large;
+
+  }
+  .page {
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-inline: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .flex-col p{
+    margin-bottom: 40px;
+  }
