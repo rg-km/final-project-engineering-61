@@ -12,8 +12,8 @@ type User struct {
 }
 
 type Materi struct {
-	id_materi      int64  `db:"id_materi"`
-	nama_pelajaran string `db:"nama_pelajaran"`
-	sub_bab        string `db:"sub_bab"`
-	content        string `db:"content"`
+	ID_Materi      int64  `db:"id_materi"`
+	Nama_Pelajaran string `db:"nama_pelajaran"`
+	Subbab         string `db:"sub_bab"`
+	Content        string `db:"content"`
 }

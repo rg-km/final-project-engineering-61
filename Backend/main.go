@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Backend/api"
-	"Backend/repository"
+	"KuasProject/api"
+	"KuasProject/repository"
 	"database/sql"
 
 	_ "github.com/mattn/go-sqlite3"
